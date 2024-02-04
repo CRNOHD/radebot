@@ -3,7 +3,8 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 import google.generativeai as gen_ai
-
+import requests
+import base64
 
 
 # Load environment variables
@@ -14,6 +15,19 @@ st.set_page_config(
     page_title="Radebot",
     page_icon=":sparkles:",  # Favicon emoji
     layout="centered",  # Page layout option
+)
+
+image_url = "https://raw.githubusercontent.com/CRNOHD/radebot/main/hat2.gif"
+response = requests.get(image_url)
+image_data = response.content
+
+# Convert the image data to a data_url
+data_url = base64.b64encode(image_data).decode("utf-8")
+
+# Display the image in Streamlit
+st.markdown(
+    f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+    unsafe_allow_html=True,
 )
 
 GOOGLE_API_KEY = os.getenv("AIzaSyDhKHiVyXhINaIL6NYHLtASgoaj3NvSBqg")
