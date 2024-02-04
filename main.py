@@ -26,7 +26,7 @@ data_url = base64.b64encode(image_data).decode("utf-8")
 
 # Display the image in Streamlit
 st.markdown(
-    f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+    f'<img src="data:image/gif;base64,{data_url}" alt="Radebot">',
     unsafe_allow_html=True,
 )
 
