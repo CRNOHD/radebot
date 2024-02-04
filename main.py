@@ -17,7 +17,7 @@ st.set_page_config(
     layout="centered",  # Page layout option
 )
 
-image_url = "https://raw.githubusercontent.com/CRNOHD/radebot/main/hat2.gif"
+image_url = "https://raw.githubusercontent.com/CRNOHD/radebot/main/hat3.gif"
 response = requests.get(image_url)
 image_data = response.content
 
