@@ -3,7 +3,7 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 import google.generativeai as gen_ai
-from PIL import Image
+
 
 
 # Load environment variables
@@ -15,7 +15,7 @@ st.set_page_config(
     page_icon=":sparkles:",  # Favicon emoji
     layout="centered",  # Page layout option
 )
-st.sidebar.image("hat.gif", width=st.sidebar.width()-100)
+
 GOOGLE_API_KEY = os.getenv("AIzaSyDhKHiVyXhINaIL6NYHLtASgoaj3NvSBqg")
 
 # Set up Google Gemini-Pro AI model
