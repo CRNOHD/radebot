@@ -46,7 +46,7 @@ for message in st.session_state.chat_session.history:
 # Input field for user's message
 user_prompt = st.chat_input("Ask Rade...")
 if user_prompt:
-    if user_prompt == "Rade" or "About":
+    if user_prompt in ("Rade", "About"):
         st.chat_message("assistant").markdown("✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨\nHello there! 👋 My name is Ramdane Bouroga, 😊 and I'm the proud developer of this chatbot. 😁 Feel free to contact me at crnohd@gmail.com if you have any questions or feedback. 😉\n✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨")
     else:
         # Add user's message to chat and display it
