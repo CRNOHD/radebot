@@ -48,7 +48,7 @@ if "chat_session" not in st.session_state:
     st.session_state.chat_session = model.start_chat(history=[])
 
 # Display the chatbot's title on the page
-st.title("🤖 Radebot")
+st.title("🤠 Radebot")
 
 # Display the chat history
 for message in st.session_state.chat_session.history:
