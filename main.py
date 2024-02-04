@@ -36,7 +36,6 @@ GOOGLE_API_KEY = os.getenv("AIzaSyDhKHiVyXhINaIL6NYHLtASgoaj3NvSBqg")
 gen_ai.configure(api_key=GOOGLE_API_KEY)
 model = gen_ai.GenerativeModel('gemini-pro')
 
-
 # Function to translate roles between Gemini-Pro and Streamlit terminology
 def translate_role_for_streamlit(user_role):
     if user_role == "model":
@@ -44,20 +43,12 @@ def translate_role_for_streamlit(user_role):
     else:
         return user_role
 
-
 # Initialize chat session in Streamlit if not already present
 if "chat_session" not in st.session_state:
     st.session_state.chat_session = model.start_chat(history=[])
 
 # Display the chatbot's title on the page
 st.title("🤖 Radebot")
-
-st.title_config(
-    align="center",  # Center the title horizontally
-    anchor="center",  # Set the anchor point of the title to the center
-)
-
-
 
 # Display the chat history
 for message in st.session_state.chat_session.history:
