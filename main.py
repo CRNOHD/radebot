@@ -79,7 +79,7 @@ chat_input_list = [
 ]
 
 # Input field for user's message
-user_prompt = st.chat_input(random.choice(chat_input_list))
+user_prompt = st.chat_input("Ask Rade...")
 
 if user_prompt:
     if user_prompt in ("Rade", "About"):
