@@ -58,10 +58,10 @@ page_titles = [
 ]
 
 # Randomly select a title from the list
-random_title = random.choice(page_titles)
+
 
 # Display the chatbot's title on the page
-st.title(random_title)
+st.title(random.choice(page_titles))
 
 # Display the chat history
 for message in st.session_state.chat_session.history:
@@ -77,10 +77,9 @@ chat_input_list = [
     "Go Rade...",
     "Try input Rade",
 ]
-chat_input_rand = random.choice(chat_input_list)
 
 # Input field for user's message
-user_prompt = st.chat_input(chat_input_rand)
+user_prompt = st.chat_input(random.choice(chat_input_list))
 
 if user_prompt:
     if user_prompt in ("Rade", "About"):
